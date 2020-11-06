@@ -394,7 +394,7 @@ def bridge_event_to_hass(mqttc, topicprefix, data):
             instance = channel + "/" + device_id
     if not instance:
         # no unique device identifier
-        return
+        instance = "unknown" 
 
     # detect known attributes
     for key in data.keys():
